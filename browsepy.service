@@ -2,14 +2,13 @@
 Description=browsepy
 
 [Service]
-#Environment=HOME=/root
-User=raspberryUsername
+User=carlo
 Group=audio
 Environment=BROWSEPY_HOST=0.0.0.0
 Environment=BROWSEPY_PORT=8081
 
-WorkingDirectory=/home/raspberryUsername/data/user-files/
-ExecStart=/usr/local/bin/browsepy 0.0.0.0 8081 --directory /home/raspberryUsername/data/user-files --upload /home/raspberryUsername/data/user-files --removable /home/raspberryUsername/data/user-files
+WorkingDirectory=/home/carlo/data/user-files/
+ExecStart=/home/carlo/.local/bin/browsepy 0.0.0.0 8081 --directory /home/carlo/data/user-files --upload /home/carlo/data/user-files --removable /home/carlo/data/user-files
 Restart=always
 RestartSec=2
 

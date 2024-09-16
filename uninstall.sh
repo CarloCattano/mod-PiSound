@@ -15,6 +15,6 @@ sudo rm /usr/lib/systemd/system/mod-host.service
 sudo rm /usr/lib/systemd/system/mod-ui.service
 
 echo "Removing Folders"
-sudo rm /home/raspberryUsername/.lv2 -rf
-sudo rm /home/raspberryUsername/data -rf
-sudo rm /home/raspberryUsername/mod -rf
+sudo rm /home/carlo/.lv2 -rf
+sudo rm /home/carlo/data -rf
+sudo rm /home/carlo/mod -rf

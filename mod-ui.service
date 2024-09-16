@@ -8,25 +8,21 @@ Requires=browsepy.service
 [Service]
 LimitRTPRIO=95
 LimitMEMLOCK=infinity
-User=raspberryUsername
+User=carlo
 Group=audio
 AmbientCapabilities=CAP_NET_BIND_SERVICE
 Environment=JACK_PROMISCUOUS_SERVER=jack
-Environment=HOME=/home/raspberryUsername/
-Environment=LV2_PATH=/home/raspberryUsername/.lv2
-Environment=LV2_PLUGIN_DIR=/home/raspberryUsername/.lv2
-Environment=LV2_PEDALBOARDS_DIR=/home/raspberryUsername/data/pedalboards
-Environment=MOD_DEV_ENVIRONMENT=0
+Environment=HOME=/home/carlo/
+Environment=LV2_PATH=/home/carlo/.lv2
+Environment=LV2_PLUGIN_DIR=/home/carlo/.lv2
+Environment=LV2_PEDALBOARDS_DIR=/home/carlo/data/pedalboards
+Environment=MOD_DEV_ENVIRONMENT=1
 Environment=MOD_DEVICE_WEBSERVER_PORT=80
-Environment=MOD_LOG=0
-Environment=MOD_APP=0
-Environment=MOD_LIVE_ISO=0
-Environment=MOD_SYSTEM_OUTPUT=1
-Environment=MOD_DATA_DIR=/home/raspberryUsername/data
-Environment=MOD_USER_FILES_DIR=/home/raspberryUsername/data/user-files
+Environment=MOD_DATA_DIR=/home/carlo/data
+Environment=MOD_USER_FILES_DIR=/home/carlo/data/user-files
 Environment=MOD_HTML_DIR=/usr/local/share/mod/html
 
-ExecStart=/usr/local/bin/mod-ui
+ExecStart=/home/carlo/modenv/bin/python /home/carlo/mod-ui/server.py
 Restart=always
 RestartSec=2
 
