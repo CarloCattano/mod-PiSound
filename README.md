@@ -6,7 +6,7 @@
 
 update system and install git
 ```
-sudo apt update;sudo apt upgrade -y
+sudo apt update && sudo apt upgrade -y
 sudo apt install git
 ```
 Clone the repository in your ```$HOME``` folder
