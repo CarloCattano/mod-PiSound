@@ -8,6 +8,7 @@ Group=audio
 Environment=LV2_PATH=/home/carlo/.lv2
 Environment=JACK_NO_AUDIO_RESERVATION=1
 Environment=JACK_PROMISCUOUS_SERVER=jack
+#Environment=JACK_DRIVER_DIR=/usr/lib/jack
 LimitRTPRIO=99
 LimitMEMLOCK=infinity
 ExecStart=/usr/bin/jackd -t 2000 -d alsa -d hw:pisound -m -r 48000 -p 64 -n 3 -X seq -s
